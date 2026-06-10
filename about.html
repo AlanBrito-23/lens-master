@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Master | Sobre Mí</title>
+    <style>
+        /* --- ESTILOS COMPARTIDOS (Copias idénticas para simular misma CSS) --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #121212; color: #ffffff; line-height: 1.6; }
+        
+        header {
+            background-color: #1a1a1a; padding: 20px 40px; border-bottom: 1px solid #333;
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #ff4a57; flex: 1 0 auto; }
+        nav { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; flex: 1 0 auto; }
+        nav a { color: #aaaaaa; text-decoration: none; font-size: 1.1rem; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: #ffffff; border-bottom: 2px solid #ff4a57; }
+        
+        main { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; font-weight: 300; }
+        
+        /* --- SECCIÓN SOBRE MÍ CON FLEXBOX RESPONSIVO --- */
+        .about-container {
+            display: flex;
+            flex-wrap: wrap; /* Clave para la responsividad */
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .about-image {
+            /* Se encoge y crece buscando una base ideal de 400px */
+            flex: 1 1 400px; 
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .about-text {
+            /* Toma el espacio restante con base en 400px */
+            flex: 1 1 400px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+
+        .highlight {
+            color: #ff4a57;
+            font-weight: bold;
+        }
+
+        footer { text-align: center; padding: 30px; background-color: #1a1a1a; margin-top: 40px; color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Lens Master</div>
+        <nav>
+            <a href="index.html">Galería</a>
+            <a href="about.html" class="active">Sobre Mí</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Detrás del Lente</h2>
+        
+        <section class="about-container">
+            <img class="about-image" src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=600" alt="Fotógrafo Lens Master trabajando">
+            
+            <div class="about-text">
+                <h3>Hola, soy <span class="highlight">Lens Master</span></h3>
+                <br>
+                <p>Llevo más de una década capturando fragmentos de tiempo a través de mi cámara. Mi trabajo se enfoca en congelar la luz de la naturaleza, la energía caótica de las ciudades y la autenticidad en los rostros de las personas.</p>
+                <p>Para mí, la fotografía no es solo técnica; es la búsqueda constante de una historia invisible a simple vista. Utilizo equipos de última tecnología, pero mi herramienta principal siempre será la intuición.</p>
+                <p>¡Gracias por visitar mi espacio visual! Si tienes algún proyecto en mente o quieres colaborar, no dudes en contactarme.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lens Master. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

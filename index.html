@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Master | Portafolio</title>
+    <style>
+        /* --- ESTILOS GLOBALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* --- NAVEGACIÓN COMPLETAMENTE RESPONSIVA --- */
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 40px;
+            border-bottom: 1px solid #333;
+            /* Flexbox principal del Header */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff4a57;
+            /* Asegura que el logo no se comprima demasiado */
+            flex: 1 0 auto; 
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            /* Si la pantalla es muy chica, se centra automáticamente */
+            justify-content: center;
+            flex: 1 0 auto;
+        }
+
+        nav a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ff4a57;
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        /* --- GALERÍA MAGICA CON FLEXBOX (Sin Media Queries) --- */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            /* flex: grow shrink basis;
+               - grow (1): Crece para llenar el espacio vacío.
+               - shrink (1): Se encoge si el espacio es reducido.
+               - basis (300px): Intenta mantener un ancho mínimo de 300px.
+            */
+            flex: 1 1 300px; 
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            background-color: #222;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción de la foto */
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #1a1a1a;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Lens Master</div>
+        <nav>
+            <a href="index.html" class="active">Galería</a>
+            <a href="about.html">Sobre Mí</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Portafolio Fotográfico</h2>
+        
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600" alt="Fotografía Urbana">
+                <div class="overlay"><h4>Perspectivas Urbanas</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Naturaleza Salvaje">
+                <div class="overlay"><h4>Esencia Natural</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600" alt="Retrato">
+                <div class="overlay"><h4>Miradas de Luz</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" alt="Blanco y Negro">
+                <div class="overlay"><h4>Contrastes en B&N</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" alt="Paisajes">
+                <div class="overlay"><h4>Horizontes Infinitos</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600" alt="Macro">
+                <div class="overlay"><h4>Detalles Ocultos</h4></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lens Master. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
